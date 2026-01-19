@@ -2,16 +2,15 @@ const Education = ({
   variant = 1,
   color = "color-1",
   educationData = [
-    { year: "2018", degree: "Master in Design", school: "New York University" },
     {
-      year: "2014",
-      degree: "Bachelor of Arts",
-      school: "University of London",
+      year: "2019 - 2023",
+      degree: "Bachelor of Visual Arts in Product Design",
+      school: "Bangalore Central University",
     },
     {
-      year: "2011",
-      degree: "Artist of College",
-      school: "University of Sydney",
+      year: "2016 - 2018",
+      degree: "Higher Secondary School",
+      school: "The Jain International School, Bilaspur C.G",
     },
   ],
 }) => {

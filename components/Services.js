@@ -14,16 +14,16 @@ const Services = ({ variant = "default" }) => {
         desc: "High-conversion landing pages for specific marketing campaigns.",
       },
       {
-        title: "Front-end Development",
-        desc: "Implementing designs with clean and efficient code using HTML, CSS, JS.",
+        title: "User Research & Testing",
+        desc: "Conducting research and usability testing to validate design decisions.",
       },
       {
-        title: "Back-end Development",
-        desc: "Building robust back-end systems using technologies like PHP and databases.",
+        title: "Mobile App Design",
+        desc: "Designing intuitive and engaging mobile application interfaces for iOS and Android.",
       },
       {
-        title: "Content Management System",
-        desc: "Integrating and customizing CMS platforms for easy content management.",
+        title: "Prototyping",
+        desc: "Creating interactive prototypes to visualize and test user flows before development.",
       },
     ],
     variant2: [

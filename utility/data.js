@@ -47,7 +47,6 @@ export const menus = {
     { id: 2, href: "/02_about", text: "About Me" },
     { id: 3, href: "/02_services", text: "What I Do" },
     { id: 4, href: "/02_works", text: "Works" },
-    { id: 5, href: "/02_blog", text: "Blog" },
     { id: 6, href: "/02_contact", text: "Hire Me" },
   ],
   home3: [
@@ -55,7 +54,6 @@ export const menus = {
     { id: 2, href: "/03_about", text: "About" },
     { id: 3, href: "/03_services", text: "Services" },
     { id: 4, href: "/03_works", text: "Portfolio" },
-    { id: 5, href: "/03_blog", text: "Blog" },
     { id: 6, href: "/03_contact", text: "Contact" },
   ],
   home4: [
@@ -63,7 +61,6 @@ export const menus = {
     { id: 2, href: "#section-about", text: "About Me" },
     { id: 3, href: "#section-what-i-do", text: "What I Do" },
     { id: 4, href: "#section-works", text: "Works" },
-    { id: 5, href: "#section-blog", text: "Blog" },
     { id: 6, href: "/04_contact", text: "Hire Me" },
   ],
   home5: [
@@ -94,7 +91,6 @@ export const menus = {
     { id: 2, href: "/06_about", text: "About Me" },
     { id: 3, href: "/06_services", text: "What I Do" },
     { id: 4, href: "/06_works", text: "Works" },
-    { id: 5, href: "/06_blog", text: "Blog" },
     { id: 6, href: "/06_contact", text: "Hire Me" },
   ],
   home7: [
@@ -102,7 +98,6 @@ export const menus = {
     { id: 2, href: "/07_about", text: "About Me" },
     { id: 3, href: "/07_services", text: "What I Do" },
     { id: 4, href: "/07_works", text: "Works" },
-    { id: 5, href: "/07_blog", text: "Blog" },
     { id: 6, href: "/07_contact", text: "Hire Me" },
   ],
 };

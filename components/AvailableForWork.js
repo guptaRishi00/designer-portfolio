@@ -7,11 +7,11 @@ const AvailableForWork = ({ variant = "default" }) => {
   const content = {
     default: {
       subtitle: "Available for Work",
-      title: "A Website Designer from New York",
+      title: "UI/UX Designer from Bangalore",
       description:
-        "My journey into web design started with a love for both art and technology, which led me to pursue a career where I could blend these interests seamlessly.",
+        "Results-driven UI/UX Designer with a passion for delivering seamless, user-centered digital experiences. Proficient in translating complex ideas into intuitive designs.",
       aboutLink: "/about",
-      imageSrc: "images/misc/1.webp",
+      imageSrc: "Profilephoto1.png",
       counterColor: "color",
     },
     variant2: {

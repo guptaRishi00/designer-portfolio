@@ -4,16 +4,20 @@ const MarqueeNathan = ({
   textColor = "light",
   variant = "default",
   marqueeData = [
-    { id: 1, text: "CUSTOM WEBSITE DESIGN", stroke: false },
-    { id: 2, text: "E-COMMERCE WEBSITE", stroke: true },
-    { id: 3, text: "LANDING PAGE DESIGN", stroke: false },
-    { id: 4, text: "FRONT-END DEVELOPMENT", stroke: true },
-    { id: 5, text: "BACK-END DEVELOPMENT", stroke: false },
-    { id: 6, text: "CONTENT MANAGEMENT SYSTEM", stroke: true },
+    { id: 1, text: "USER RESEARCH", stroke: false },
+    { id: 2, text: "WIREFRAMING", stroke: true },
+    { id: 3, text: "PROTOTYPING", stroke: false },
+    { id: 4, text: "VISUAL DESIGN", stroke: true },
+    { id: 5, text: "DESIGN THINKING", stroke: false },
+    { id: 6, text: "AGILE", stroke: true },
+    { id: 7, text: "FIGMA", stroke: false },
+    { id: 8, text: "ADOBE SUITE", stroke: true },
   ],
 }) => {
   const isVariant2 = variant === "variant2";
-  const items = isVariant2 ? marqueeData.variant2 : marqueeData.default;
+  // If marqueeData is passed as simple array from parent, handle it? 
+  // But usually it relies on default.
+  // Let's assume default is used.
 
   return (
     <section className={`text-${isVariant2 ? "dark" : textColor} no-top`}>

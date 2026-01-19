@@ -1,5 +1,5 @@
 import About from "@/components/About";
-import CodingSkills from "@/components/CodingSkills";
+
 import CounterSection from "@/components/CounterSection";
 import Education from "@/components/Education";
 import Experiences from "@/components/Experiences";
@@ -21,7 +21,7 @@ const page = () => {
         </section>
         <About aboutTitle="Who I Am" />
         <Skills />
-        <CodingSkills />
+
         <Experiences />
         <Education />
         <Testimonial />

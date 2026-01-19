@@ -4,22 +4,22 @@ const Works = ({ variant = "default", textColor = "light-text" }) => {
   const worksData = {
     default: [
       {
-        title: "Adidas",
-        image: "images/works/1.webp",
-        tag: "E-COMMERCE WEBSITE",
+        title: "Bettingator",
+        image: "betting.png",
+        tag: "Sports Betting Insights Platform",
         year: "2024",
       },
       {
-        title: "WWF",
-        image: "images/works/2.webp",
-        tag: "CUSTOM WEBSITE DESIGN",
+        title: "Neurolinq",
+        image: "neurolinq.png",
+        tag: "Healthcare & Neuroscience Platform",
         year: "2023",
       },
       {
-        title: "Honda",
-        image: "images/works/3.webp",
-        tag: "FRONT-END DEVELOPMENT",
-        year: "2022",
+        title: "Newspace",
+        image: "Project4.png",
+        tag: "Website Redesign",
+        year: "2023",
       },
     ],
     variant2: [
@@ -92,32 +92,31 @@ const Works = ({ variant = "default", textColor = "light-text" }) => {
           {works.map((work, index) => (
             <div key={index} className="col-lg-4">
               <div
-                className={`hover relative overflow-hidden ${
-                  isVariant2 ? "" : "text-light"
-                }`}
+                className={`hover relative overflow-hidden ${isVariant2 ? "" : "text-light"
+                  }`}
               >
                 <Link
                   href={isVariant2 ? "03_work-single" : "work-single"}
                   className="overflow-hidden d-block relative"
                 >
-                  <h2
-                    className={`fs-40 abs-centered z-index-1 hover-op-0 ${
-                      isVariant2 ? "text-white text-center" : ""
-                    }`}
-                  >
-                    {work.title}
-                  </h2>
                   <img
                     src={work.image}
                     className="img-fluid hover-scale-1-2"
                     alt="image"
                   />
-                  <div className="absolute bottom-0 w-100 p-4 d-flex text-white justify-content-between">
-                    <div className={isVariant2 ? "" : "d-tag-s2"}>
-                      {isVariant2 ? <h4>{work.tag}</h4> : work.tag}
+                  <div className="absolute w-100 h-100 top-0 start-0 hover-op-1 transition-all-3">
+                    <div className="w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center">
+                      <h2 className={`fs-40 text-white`}>
+                        {work.title}
+                      </h2>
                     </div>
-                    <div className={isVariant2 ? "" : "fw-bold"}>
-                      {work.year}
+                    <div className="absolute bottom-0 w-100 p-4 d-flex text-white justify-content-between">
+                      <div className={isVariant2 ? "" : "d-tag-s2"}>
+                        {isVariant2 ? <h4>{work.tag}</h4> : work.tag}
+                      </div>
+                      <div className={isVariant2 ? "" : "fw-bold"}>
+                        {work.year}
+                      </div>
                     </div>
                   </div>
                 </Link>
@@ -130,7 +129,27 @@ const Works = ({ variant = "default", textColor = "light-text" }) => {
   );
 };
 
-export default Works;
+const styles = `
+  .hover-op-1 {
+    opacity: 0;
+    background: rgba(0,0,0,0.5); 
+  }
+  .hover:hover .hover-op-1 {
+    opacity: 1;
+  }
+  .transition-all-3 {
+    transition: all 0.3s ease;
+  }
+`;
+
+export default function WorksWithStyles(props) {
+  return (
+    <>
+      <style>{styles}</style>
+      <Works {...props} />
+    </>
+  );
+}
 
 export const Works2 = () => {
   const works = [
@@ -219,15 +238,21 @@ export const Works3 = ({ url = "06_work-single" }) => {
       isHeader: true,
     },
     {
-      title: "Adidas",
-      category: "E-Commerce Website",
-      image: "images/works/1.webp",
+      title: "Bettingator",
+      category: "Sports Betting Insights Platform",
+      image: "betting.png",
       year: "2024",
     },
     {
-      title: "WWF",
-      category: "Custom Website Development",
-      image: "images/works/2.webp",
+      title: "Neurolinq",
+      category: "Healthcare & Neuroscience Platform",
+      image: "neurolinq.png",
+      year: "2023",
+    },
+    {
+      title: "Newspace",
+      category: "Website Redesign",
+      image: "Project4.png",
       year: "2023",
     },
   ];

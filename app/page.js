@@ -1,6 +1,5 @@
 import About from "@/components/About";
 import AvailableForWork from "@/components/AvailableForWork";
-import Blog from "@/components/Blog";
 import FitParentTitle from "@/components/FitParentTitle";
 import MarqueeNathan from "@/components/MarqueeNathan";
 import Services from "@/components/Services";
@@ -21,7 +20,7 @@ const page = () => {
         <div id="top" />
         <section className="no-top">
           <div className="text-fit-wrapper">
-            <FitParentTitle title={"NATHAN"} />
+            <FitParentTitle title={"SHRISTI"} />
             <Header activePage="1" />
           </div>
           <div className="spacer-double" />
@@ -31,7 +30,6 @@ const page = () => {
         <Services />
         <Works />
         <MarqueeNathan />
-        <Blog />
       </div>
     </NathanLayout>
   );

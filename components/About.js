@@ -6,11 +6,11 @@ const About = ({ variant = "default", aboutTitle = "About Me" }) => {
   const content = {
     default: {
       title:
-        "Transforming your vision into a dynamic web experience through meticulously crafted designs, intuitive user interfaces, and robust functionality.",
+        "Results-driven UI/UX Designer with a passion for delivering seamless, user-centered digital experiences.",
       paragraph1:
-        "Hi there! I'm Nathan, a web designer with a passion for creating exceptional digital experiences. With over 15 years in the industry, I have skills in designing websites that are not only visually appealing but also functional and user-friendly.",
+        "Hi there! I'm Shristi Mittal, a UI/UX Designer who translates complex ideas into intuitive designs. Strong collaborator with experience working in agile environments design solutions.",
       paragraph2:
-        "I specialize in crafting bespoke websites using the latest technologies and design trends, including HTML5, CSS3, JavaScript, and popular content management systems like WordPress, Joomla, and Shopify.",
+        "Adept in user research, wireframing, prototyping, and usability testing to create data-driven designs. Proficient in tools like Figma, Photoshop, and Sketchbook.",
     },
     variant2: {
       title: (

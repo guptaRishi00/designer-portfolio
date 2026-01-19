@@ -3,19 +3,14 @@ const Experiences = ({
   color = "color-1",
   experiencesData = [
     {
-      period: "2022 – Present",
-      title: "Lead Website Designer",
-      company: "Tech Solutions Inc",
+      period: "2023 – Present",
+      title: "Design Engineer 1",
+      company: "Newspace Research & Technology",
     },
     {
-      period: "2018 - 2022",
-      title: "Mid-Level Website Designer",
-      company: "Creativo Web Agency",
-    },
-    {
-      period: "2016 - 2018",
-      title: "Junior Website Designer",
-      company: "Rocket Web Services",
+      period: "May 2023 - July 2023",
+      title: "UI/UX Designer",
+      company: "Beanpole LLP",
     },
   ],
 }) => {

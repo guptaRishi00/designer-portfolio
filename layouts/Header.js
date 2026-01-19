@@ -8,7 +8,6 @@ const Header = ({
     { id: 2, href: "/about", text: "About Me" },
     { id: 3, href: "/services", text: "What I Do" },
     { id: 4, href: "/works", text: "Works" },
-    { id: 5, href: "/blog", text: "Blog" },
     { id: 6, href: "/contact", text: "Hire Me" },
   ],
   extraClass = "",
@@ -19,13 +18,12 @@ const Header = ({
         {menus.map((item, index) => (
           <li
             key={index}
-            className={`${activePage == item.id ? "active" : ""} menu-item-${
-              item.id
-            }`}
+            className={`${activePage == item.id ? "active" : ""} menu-item-${item.id
+              }`}
           >
             <Link href={item.href}>
               {activePage ===
-              (item.href === "/" ? "home" : item.href.slice(1)) ? (
+                (item.href === "/" ? "home" : item.href.slice(1)) ? (
                 <span>{item.href === "/" ? "Home" : activePage}</span>
               ) : (
                 item.text
