@@ -25,9 +25,7 @@ const Footer = ({ footerShape = false }) => {
                   </li>
                 </ul>
                 <p className="no-bottom">
-                  All Right Reserved
-                  <br />
-                  Template By Designesia
+                  © {new Date().getFullYear()} Shristi Mittal
                 </p>
               </div>
             </div>

@@ -15,7 +15,7 @@ const page = () => {
         <div id="top" />
         <section className="no-top">
           <div className="text-fit-wrapper">
-            <FitParentTitle title="About Me" innitialFontSize={389.8} />
+            <FitParentTitle title="About Me" innitialFontSize={300} />
             <Header activePage="2" />
           </div>
         </section>
