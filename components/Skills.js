@@ -44,7 +44,7 @@ const Skills = ({ dark }) => {
                 { name: "Figma", icon: <TbBrandFigma size={50} /> },
                 { name: "Adobe Photoshop", icon: <SiAdobephotoshop size={50} /> },
                 { name: "Sketchbook", icon: <PiSketchLogo size={50} /> },
-                { name: "Solidworks", image: "solidworks.svg" },
+
                 { name: "Blender", icon: <SiBlender size={50} /> },
                 { name: "Adobe After Effects", icon: <SiAdobeaftereffects size={50} /> },
               ].map((skill, index) => (

@@ -24,12 +24,7 @@ const page = () => {
 
         <Experiences />
         <Education />
-        <Testimonial />
-        <section className="no-top">
-          <div className="container">
-            <CounterSection />
-          </div>
-        </section>
+
       </div>
     </NathanLayout>
   );

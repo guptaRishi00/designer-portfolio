@@ -62,19 +62,14 @@ const Services = ({ variant = "default" }) => {
       <div className="container">
         <div className="row g-5">
           <div className="col-lg-4 wow fadeInRight" data-wow-delay=".3s">
-            <div className="p-3 h-100 d-lg-block d-sm-none text-light jarallax">
+            <div className="p-3 h-100 text-light jarallax">
               <img
-                src={
-                  isVariant2
-                    ? "03_images/what_i_do_1.jpg"
-                    : "images/misc/2.webp"
-                }
+                src="/whatido.png"
                 className="jarallax-img"
                 alt="image"
               />
               <h3 className="abs-centered m-0">What I Do</h3>
             </div>
-            <div className="subtitle d-lg-none d-sm-block">What I Do</div>
           </div>
           <div className="col-lg-8">
             <div className="row g-4">

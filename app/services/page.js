@@ -59,7 +59,7 @@ const page = () => {
         <div id="top" />
         <section className="no-top">
           <div className="text-fit-wrapper">
-            <FitParentTitle title="What I Do" innitialFontSize={393.1} />
+            <FitParentTitle title="What I Do" innitialFontSize={300} />
             <Header activePage="3" />
           </div>
         </section>
