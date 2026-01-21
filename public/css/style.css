@@ -13675,6 +13675,7 @@ blockquote.q-big .d-quote-by{
 .text-fit-wrapper{
   line-height: -.8em;
   padding-right: 1vw;
+  width: 100%;
 }
 .text-fit{
   margin-top: -.1em;

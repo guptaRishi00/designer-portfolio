@@ -20,30 +20,31 @@ const Skills = () => {
     { name: "Visual Design", level: 80 },
   ];
 
+
+
   const tools = [
     {
       name: "Figma",
-      icon: <TbBrandFigma size={35} style={{ color: "#A259FF" }} />,
+      icon: <img src="/figma.png" alt="Figma" style={{ width: 50, height: 50 }} />,
+
+
     },
     {
       name: "Photoshop",
-      icon: <SiAdobephotoshop size={35} style={{ color: "#31A8FF" }} />,
+      icon: <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/adobe-photoshop-icon.png" alt="Figma" style={{ width: 50, height: 50 }} />
     },
-    {
-      name: "Sketch",
-      icon: <PiSketchLogo size={35} style={{ color: "#FDC900" }} />,
-    },
+
     {
       name: "Adobe XD",
-      icon: <SiAdobexd size={35} style={{ color: "#FF61F6" }} />,
+      icon: <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg" alt="Figma" style={{ width: 50, height: 50 }} />
     },
     {
       name: "Blender",
-      icon: <SiBlender size={35} style={{ color: "#E87D0D" }} />,
+      icon: <img src="https://www.pngmart.com/files/23/Blender-Logo-PNG-Picture.png" alt="Figma" style={{ width: 68, height: 50 }} />
     },
     {
       name: "After Effects",
-      icon: <SiAdobeaftereffects size={35} style={{ color: "#D291FF" }} />,
+      icon: <img src="https://1000logos.net/wp-content/uploads/2020/07/After-Effects-Logo-500x315.png" alt="Figma" style={{ width: 80, height: 50 }} />
     },
   ];
 
@@ -138,10 +139,7 @@ const Skills = () => {
                   <div
                     className="d-flex justify-content-center align-items-center mb-3 mx-auto"
                     style={{
-                      width: "80px",
-                      height: "80px",
-                      backgroundColor: "#0a0a0a",
-                      borderRadius: "4px",
+
                     }}
                   >
                     {tool.icon}

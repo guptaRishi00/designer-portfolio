@@ -80,7 +80,7 @@ const page = () => {
         <div id="top" />
         <section className="no-top">
           <div className="text-fit-wrapper">
-            <FitParentTitle title="My Works" innitialFontSize={300} />
+            <FitParentTitle title="My Works" innitialFontSize={340} />
             <Header activePage="4" />
           </div>
         </section>

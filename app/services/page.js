@@ -63,7 +63,7 @@ const page = () => {
         {/* --- HERO SECTION --- */}
         <section className="no-top">
           <div className="text-fit-wrapper">
-            <FitParentTitle title="What I Do" innitialFontSize={300} />
+            <FitParentTitle title="What I Do" innitialFontSize={380} />
             <Header activePage="3" />
           </div>
         </section>
@@ -79,8 +79,6 @@ const page = () => {
                   style={{
                     fontSize: "13px",
                     letterSpacing: "2px",
-                    borderLeft: "2px solid #fff",
-                    paddingLeft: "15px",
                   }}
                 >
                   What I Do

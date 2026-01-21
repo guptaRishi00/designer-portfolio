@@ -5,7 +5,7 @@ import Education from "@/components/Education";
 import Experiences from "@/components/Experiences";
 import FitParentTitle from "@/components/FitParentTitle";
 import Skills from "@/components/Skills";
-import Testimonial from "@/components/Testimonial";
+import ClientReviews from "@/components/ClientReviews";
 import Header from "@/layouts/Header";
 import NathanLayout from "@/layouts/NathanLayout";
 const page = () => {
@@ -15,7 +15,7 @@ const page = () => {
         <div id="top" />
         <section className="no-top">
           <div className="text-fit-wrapper">
-            <FitParentTitle title="About Me" innitialFontSize={300} />
+            <FitParentTitle title="About Me" innitialFontSize={380} />
             <Header activePage="2" />
           </div>
         </section>
@@ -24,6 +24,7 @@ const page = () => {
 
         <Experiences />
         <Education />
+        <ClientReviews />
 
       </div>
     </NathanLayout>

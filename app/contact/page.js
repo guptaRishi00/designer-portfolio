@@ -9,7 +9,7 @@ const page = () => {
         <div id="top" />
         <section className="no-top">
           <div className="text-fit-wrapper">
-            <FitParentTitle title="Hire Me" innitialFontSize={300} />
+            <FitParentTitle title="Hire Me" innitialFontSize={420} />
             <Header activePage="6" />
           </div>
         </section>

@@ -11,7 +11,7 @@ const AvailableForWork = ({ variant = "default" }) => {
       description:
         "Results-driven UI/UX Designer with a passion for delivering seamless, user-centered digital experiences. Proficient in translating complex ideas into intuitive designs.",
       aboutLink: "/about",
-      imageSrc: "Profilephoto1.png",
+      imageSrc: "Profile.jpeg",
       counterColor: "color",
     },
     variant2: {
@@ -62,7 +62,7 @@ const AvailableForWork = ({ variant = "default" }) => {
         <div className="col-lg-6">
           <img
             src={selectedContent.imageSrc}
-            className="w-100 wow fadeInUp"
+            className="w-75 d-block mx-auto wow fadeInUp"
             data-wow-delay=".6s"
             alt="image"
           />
