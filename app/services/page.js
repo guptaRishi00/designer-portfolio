@@ -1,6 +1,7 @@
 import FitParentTitle from "@/components/FitParentTitle";
 import Header from "@/layouts/Header";
 import NathanLayout from "@/layouts/NathanLayout";
+
 const page = () => {
   const services = [
     {
@@ -53,30 +54,56 @@ const page = () => {
       description: "Integrating social media platforms to enhance engagement.",
     },
   ];
+
   return (
     <NathanLayout>
       <div className="section-dark no-bottom no-top" id="content">
         <div id="top" />
+
+        {/* --- HERO SECTION --- */}
         <section className="no-top">
           <div className="text-fit-wrapper">
             <FitParentTitle title="What I Do" innitialFontSize={300} />
             <Header activePage="3" />
           </div>
         </section>
-        <section className="no-top">
+
+        {/* --- SERVICES SECTION (Split Layout) --- */}
+        <section className="no-top pt-5">
           <div className="container">
-            <div className="row g-5">
-              <div className="col-lg-8 offset-lg-2">
-                <div className="row g-4">
+            <div className="row">
+              {/* LEFT COLUMN: Section Title */}
+              <div className="col-md-3">
+                <h3
+                  className="fw-bold text-uppercase italic mb-5"
+                  style={{
+                    fontSize: "13px",
+                    letterSpacing: "2px",
+                    borderLeft: "2px solid #fff",
+                    paddingLeft: "15px",
+                  }}
+                >
+                  What I Do
+                </h3>
+              </div>
+
+              {/* RIGHT COLUMN: Content Grid */}
+              <div className="col-md-9">
+                <div className="row g-5">
                   {services.map((service, index) => (
                     <div
                       key={index}
                       className="col-lg-6 col-sm-6 wow fadeInUp"
                       data-wow-delay=".3s"
                     >
-                      <div className="relative">
-                        <h4>{service.title}</h4>
-                        <p>{service.description}</p>
+                      <div className="relative pb-4">
+                        {/* Service Item Title - Also Left Aligned */}
+                        <h4 className="fs-20 fw-bold mb-3 text-white">
+                          {service.title}
+                        </h4>
+                        <p className="opacity-60 fs-15 lh-lg">
+                          {service.description}
+                        </p>
                       </div>
                     </div>
                   ))}
@@ -89,4 +116,5 @@ const page = () => {
     </NathanLayout>
   );
 };
+
 export default page;
