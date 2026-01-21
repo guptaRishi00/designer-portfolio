@@ -130,13 +130,13 @@ const Works = ({ variant = "default", textColor = "light-text" }) => {
                     <h2 className="work-card-title">
                       {work.title}
                     </h2>
-                    <div className="work-card-footer">
-                      <span className="work-card-category">
-                        {isVariant2 ? work.tag : work.category}
-                      </span>
-                      <span className="work-card-year">
+                    <div className="absolute bottom-0 w-100 p-4 d-flex text-white justify-content-between">
+                      <div className={isVariant2 ? "" : "d-tag-s2"}>
+                        {isVariant2 ? <h4>{work.tag}</h4> : work.category}
+                      </div>
+                      <div className={isVariant2 ? "" : "fw-bold"}>
                         {work.year}
-                      </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -157,7 +157,6 @@ const styles = `
   .work-card {
     position: relative;
     height: 350px;
-    border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease;
   }
@@ -210,7 +209,7 @@ const styles = `
     line-height: 1.1;
     margin: 0;
     word-wrap: break-word;
-    text-align: center;
+    text-align: left;
   }
   .work-card-footer {
     position: absolute;
