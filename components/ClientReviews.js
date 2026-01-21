@@ -1,4 +1,7 @@
+"use client";
 import { FaUserCircle } from "react-icons/fa";
+import Slider from "react-slick";
+import { sliderProps } from "@/utility/sliderprops";
 
 const ClientReviews = () => {
     const reviews = [
@@ -52,25 +55,25 @@ const ClientReviews = () => {
                         </h3>
                     </div>
                     <div className="col-lg-10">
-                        <div className="row g-4">
+                        <Slider {...sliderProps.clientReviews}>
                             {reviews.map((review, index) => (
-                                <div key={index} className="col-lg-4 col-md-6">
+                                <div key={index} className="px-2">
                                     <div
                                         className="review-card p-4 h-100"
                                         style={{
-                                            backgroundColor: "#0a0a0a",
+                                            backgroundColor: "#000",
                                             border: "1px solid #222",
+                                            display: "flex",
+                                            flexDirection: "column",
+                                            alignItems: "flex-start",
+                                            height: "220px",
                                         }}
                                     >
-                                        <div className="d-flex align-items-center mb-3">
-                                            <FaUserCircle size={50} className="me-3" style={{ color: "#666" }} />
-                                            <div>
-                                                <h6 className="mb-0 fw-bold text-white">
-                                                    {review.name}
-                                                </h6>
-                                                <small className="text-muted">{review.role}</small>
-                                            </div>
-                                        </div>
+                                        <FaUserCircle size={40} style={{ color: "#666", marginBottom: "12px" }} />
+                                        <h6 className="mb-1 fw-bold text-white">
+                                            {review.name}
+                                        </h6>
+                                        <small className="text-muted" style={{ marginBottom: "12px" }}>{review.role}</small>
                                         <p
                                             className="mb-0 text-white"
                                             style={{ fontSize: "14px", lineHeight: "1.7", opacity: 0.8 }}
@@ -80,7 +83,7 @@ const ClientReviews = () => {
                                     </div>
                                 </div>
                             ))}
-                        </div>
+                        </Slider>
                     </div>
                 </div>
             </div>
