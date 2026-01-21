@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CounterSection from "./CounterSection";
+import Image from "next/image";
 
 const AvailableForWork = ({ variant = "default" }) => {
   const isVariant2 = variant === "variant2";
@@ -11,7 +12,7 @@ const AvailableForWork = ({ variant = "default" }) => {
       description:
         "Results-driven UI/UX Designer with a passion for delivering seamless, user-centered digital experiences. Proficient in translating complex ideas into intuitive designs.",
       aboutLink: "/about",
-      imageSrc: "Profile.jpeg",
+      imageSrc: "/Profile.jpeg",
       counterColor: "color",
     },
     variant2: {
