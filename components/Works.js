@@ -4,46 +4,46 @@ const Works = ({ variant = "default", textColor = "light-text" }) => {
   const worksData = {
     default: [
       {
-        image: "/socleh2.png",
-        title: "Socle RH",
-        description:
-          "Built a polished HR site that reinforces expertise through intuitive UX and a confident visual system.",
-        link: "https://www.soclerh.fr/fr",
-      },
-      {
-        image: "/neurolinq2.png",
-        title: "NeuroLinq",
-        description:
-          "Seamlessly connects individuals with nurse-led ADHD assessments and workplace support via an accessible UI that instills professional trust.",
-        link: "https://neurolinq-2.vercel.app/",
+        image: "/Frame4.png",
+        title: "NEWSPACE R&T",
+        category: "AEROSPACE & DEFENSE",
+        year: "2023-PRESENT",
+        link: "/Projects/Newspace",
       },
       {
         image: "/betting.png",
-        title: "BettinGator",
-        description:
-          "A clean, operable UI for esport and AI-hosted fights using card layouts, fluid indicators, and clear visual hierarchy to enhance readability and user engagement.",
+        title: "BETTINGATOR",
+        category: "SPORTS BETTING INSIGHTS",
+        year: "FREELANCE",
         link: "https://www.behance.net/gallery/228485313/UIUX-Case-Study-Bettingator",
       },
       {
+        image: "/neurolinq2.png",
+        title: "NEUROLINQ",
+        category: "HEALTHCARE & ADHD SUPPORT",
+        year: "FREELANCE",
+        link: "https://neurolinq-2.vercel.app/",
+      },
+      {
+        image: "/socleh2.png",
+        title: "SOCLE RH",
+        category: "HR SOLUTIONS",
+        year: "FREELANCE",
+        link: "https://www.soclerh.fr/fr",
+      },
+      {
         image: "/frame2.png",
-        title: "Jia Organic Eco Resort",
-        description:
-          "Elegant sustainable aesthetics with clean layouts to reflect the resort's eco ethos, blending a nature environment on storytelling to highlight wellness and relaxation.",
+        title: "JIA ORGANIC",
+        category: "ECO RESORT",
+        year: "FREELANCE",
         link: "https://www.jiaorganicecoresort.com/",
       },
       {
         image: "/Frame3.png",
-        title: "Bloomvest",
-        description:
-          "Simplified complex financial services into an intuitive, credibility-focused experience. Used data visualization techniques for CA to improve user understanding and trust.",
-        link: "https://www.bloomvest.io/",
-      },
-      {
-        image: "/Frame4.png",
-        title: "Newspace Research & Technologies",
-        description:
-          "Designed mission-critical control interfaces for UAV operations with a focus on real-time data accuracy and system reliability to enhance performance.",
-        link: "/Projects/Newspace",
+        title: "BLOOMVEST",
+        category: "FINANCIAL EDUCATION PLATFORM",
+        year: "FREELANCE",
+        link: "https://bloomvest.io",
       },
     ],
     variant2: [
@@ -115,34 +115,32 @@ const Works = ({ variant = "default", textColor = "light-text" }) => {
         <div className="row g-4 wow fadeInRight" data-wow-delay=".5s">
           {works.map((work, index) => (
             <div key={index} className="col-lg-4">
-              <div
-                className={`hover relative overflow-hidden ${isVariant2 ? "" : "text-light"
-                  }`}
+              <Link
+                href={isVariant2 ? "03_work-single" : (work.link || "work-single")}
+                target={!isVariant2 && work.link && work.link.startsWith("http") ? "_blank" : "_self"}
+                className="work-card-link"
               >
-                <Link
-                  href={isVariant2 ? "03_work-single" : (work.link || "work-single")}
-                  target={!isVariant2 && work.link && work.link.startsWith("http") ? "_blank" : "_self"}
-                  className="overflow-hidden d-block relative"
-                >
-                  <img
-                    src={work.image}
-                    className="img-fluid hover-scale-1-2 img-fixed-height"
-                    alt="image"
+                <div className="work-card">
+                  <div
+                    className="work-card-bg"
+                    style={{ backgroundImage: `url(${work.image})` }}
                   />
-                  <div className="absolute w-100 h-100 top-0 start-0 hover-op-1 transition-all-3">
-                    <div className="w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center">
-                      <h2 className={`fs-40 text-white`}>
-                        {work.title}
-                      </h2>
-                    </div>
-                    <div className="absolute bottom-0 w-100 p-4 d-flex text-white justify-content-between">
-                      <div className={isVariant2 ? "" : "d-tag-s2"}>
-                        {isVariant2 ? <h4>{work.tag}</h4> : work.description}
-                      </div>
+                  <div className="work-card-overlay" />
+                  <div className="work-card-content">
+                    <h2 className="work-card-title">
+                      {work.title}
+                    </h2>
+                    <div className="work-card-footer">
+                      <span className="work-card-category">
+                        {isVariant2 ? work.tag : work.category}
+                      </span>
+                      <span className="work-card-year">
+                        {work.year}
+                      </span>
                     </div>
                   </div>
-                </Link>
-              </div>
+                </div>
+              </Link>
             </div>
           ))}
         </div>
@@ -152,20 +150,96 @@ const Works = ({ variant = "default", textColor = "light-text" }) => {
 };
 
 const styles = `
-  .hover-op-1 {
-    opacity: 0;
-    background: rgba(0,0,0,0.5); 
+  .work-card-link {
+    text-decoration: none;
+    display: block;
   }
-  .hover:hover .hover-op-1 {
-    opacity: 1;
-  }
-  .transition-all-3 {
-    transition: all 0.3s ease;
-  }
-  .img-fixed-height {
+  .work-card {
+    position: relative;
     height: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  .work-card:hover {
+    transform: scale(1.02);
+  }
+  .work-card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    object-fit: cover;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+  }
+  .work-card:hover .work-card-bg {
+    transform: scale(1.1);
+  }
+  .work-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.9) 100%
+    );
+  }
+  .work-card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    color: #fff;
+  }
+  .work-card-title {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    margin: 0;
+    word-wrap: break-word;
+    text-align: center;
+  }
+  .work-card-footer {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+  .work-card-category {
+    font-size: 0.65rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 60%;
+  }
+  .work-card-year {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 `;
 

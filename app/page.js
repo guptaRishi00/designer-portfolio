@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import AvailableForWork from "@/components/AvailableForWork";
+import CounterSection from "@/components/CounterSection";
 import FitParentTitle from "@/components/FitParentTitle";
 import MarqueeNathan from "@/components/MarqueeNathan";
 import Services from "@/components/Services";
@@ -26,10 +27,16 @@ const page = () => {
           <div className="spacer-double" />
           <AvailableForWork />
         </section>
+        <MarqueeNathan />
         <About />
         <Services />
+        <section className="no-top">
+          <div className="container">
+            <CounterSection />
+          </div>
+        </section>
         <Works />
-        <MarqueeNathan />
+        {/* <MarqueeNathan /> */}
       </div>
     </NathanLayout>
   );

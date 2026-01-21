@@ -67,7 +67,7 @@ const AvailableForWork = ({ variant = "default" }) => {
         </div>
       </div>
       <div className="spacer-double" />
-      <CounterSection color={selectedContent.counterColor} />
+      {/* <CounterSection color={selectedContent.counterColor} /> */}
     </div>
   );
 };
