@@ -26,7 +26,7 @@ const AvailableForWork = ({ variant = "default" }) => {
       description:
         "Hi, I'm Selena, a passionate makeup artist based in the heart of New York City. With over 12 years of experience in the beauty industry, I've had the privilege of working with a diverse clientele.",
       aboutLink: "/03_about",
-      imageSrc: "03_images/profile_pic_1.jpg",
+      imageSrc: "/03_images/profile_pic_1.jpg",
       counterColor: "color-1",
     },
   };
@@ -61,11 +61,14 @@ const AvailableForWork = ({ variant = "default" }) => {
           </a>
         </div>
         <div className="col-lg-6">
-          <img
+          <Image
             src={selectedContent.imageSrc}
             className="w-75 d-block mx-auto wow fadeInUp"
             data-wow-delay=".6s"
-            alt="image"
+            alt="Profile Image"
+            width={500} // Add required width
+            height={600} // Add required height
+            priority // Good for hero/above-the-fold images
           />
         </div>
       </div>
