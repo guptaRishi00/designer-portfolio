@@ -56,7 +56,7 @@ const NewspacePortfolio = () => {
                 {/* Hero Section */}
                 <section className="no-top">
                     <div className="text-fit-wrapper">
-                        <FitParentTitle title={"NEWSPACE"} />
+                        <h1 style={{ fontSize: 'clamp(4rem, 15vw, 12rem)', fontWeight: '900', margin: 0 }}>NEWSPACE</h1>
                         <Header />
                     </div>
                     <div className="spacer-double" />

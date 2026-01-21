@@ -7,66 +7,69 @@ const works = [
   {
     image: "/socleh2.png",
     title: "Socle RH",
-    description:
-      "Built a polished HR site that reinforces expertise through intuitive UX and a confident visual system.",
+    description: "HR SOLUTIONS", // Using this for the category slot
+    year: "FREELANCE",
     link: "https://www.soclerh.fr/fr",
   },
   {
     image: "/neurolinq2.png",
     title: "NeuroLinq",
-    description:
-      "Seamlessly connects individuals with nurse-led ADHD assessments and workplace support via an accessible UI that instills professional trust.",
+    description: "HEALTHCARE & ADHD SUPPORT",
+    year: "FREELANCE",
     link: "https://neurolinq-2.vercel.app/",
   },
   {
     image: "/betting.png",
     title: "BettinGator",
-    description:
-      "A clean, operable UI for esport and AI-hosted fights using card layouts, fluid indicators, and clear visual hierarchy to enhance readability and user engagement.",
+    description: "SPORTS BETTING INSIGHTS",
+    year: "FREELANCE",
     link: "https://www.behance.net/gallery/228485313/UIUX-Case-Study-Bettingator",
   },
   {
     image: "/frame2.png",
     title: "Jia Organic Eco Resort",
-    description:
-      "Elegant sustainable aesthetics with clean layouts to reflect the resort's eco ethos, blending a nature environment on storytelling to highlight wellness and relaxation.",
+    description: "ECO RESORT",
+    year: "FREELANCE",
     link: "https://www.jiaorganicecoresort.com/",
   },
   {
     image: "/Frame3.png",
     title: "Bloomvest",
-    description:
-      "Simplified complex financial services into an intuitive, credibility-focused experience. Used data visualization techniques for CA to improve user understanding and trust.",
+    description: "FINANCIAL EDUCATION PLATFORM",
+    year: "FREELANCE",
     link: "https://www.bloomvest.io/",
   },
   {
     image: "/Frame4.png",
     title: "Newspace Research & Technologies",
-    description:
-      "Designed mission-critical control interfaces for UAV operations with a focus on real-time data accuracy and system reliability to enhance performance.",
+    description: "AEROSPACE & DEFENSE",
+    year: "2023-PRESENT",
     link: "/Projects/Newspace",
   },
 ];
 
-const WorkItem = ({ title, image, description, link }) => (
+const WorkItem = ({ title, image, description, year, link }) => (
   <div className="col-lg-4">
-    <div className="hover relative overflow-hidden text-light">
-      <Link href={link || "/work-single"} target={link && link.startsWith("http") ? "_blank" : "_self"} className="overflow-hidden d-block relative">
-        <img
-          src={image.includes("/") ? image : image.includes(".png") ? image : `images/works/${image}`}
-          className="img-fluid hover-scale-1-2 img-fixed-height"
-          alt="image"
+    <Link
+      href={link || "/work-single"}
+      target={link && link.startsWith("http") ? "_blank" : "_self"}
+      className="work-card-link"
+    >
+      <div className="work-card">
+        <div
+          className="work-card-bg"
+          style={{ backgroundImage: `url(${image})` }}
         />
-        <div className="absolute w-100 h-100 top-0 start-0 hover-op-1 transition-all-3">
-          <div className="w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center">
-            <h2 className="fs-40 text-white">{title}</h2>
-          </div>
+        <div className="work-card-overlay" />
+        <div className="work-card-content">
+          <h2 className="work-card-title">{title}</h2>
           <div className="absolute bottom-0 w-100 p-4 d-flex text-white justify-content-between">
             <div className="d-tag-s2">{description}</div>
+            <div className="fw-bold">{year}</div>
           </div>
         </div>
-      </Link>
-    </div>
+      </div>
+    </Link>
   </div>
 );
 
@@ -95,29 +98,76 @@ const page = () => {
   );
 };
 
+// These styles are copied exactly from your homepage Works component
 const styles = `
-  .hover-op-1 {
-    opacity: 0;
-    background: rgba(0,0,0,0.5);
+  .work-card-link {
+    text-decoration: none;
+    display: block;
   }
-  .hover:hover .hover-op-1 {
-    opacity: 1;
-  }
-  .transition-all-3 {
-    transition: all 0.3s ease;
-  }
-  .img-fixed-height {
+  .work-card {
+    position: relative;
     height: 350px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  .work-card:hover {
+    transform: scale(1.02);
+  }
+  .work-card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    object-fit: cover;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+  }
+  .work-card:hover .work-card-bg {
+    transform: scale(1.1);
+  }
+  .work-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.9) 100%
+    );
+  }
+  .work-card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    color: #fff;
+  }
+  .work-card-title {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    margin: 0;
+    word-wrap: break-word;
+    text-align: left;
   }
 `;
 
-export default function PageWrapper() { // cleaner approach
+export default function PageWrapper() {
   return (
     <>
       <style>{styles}</style>
       {page()}
     </>
-  )
+  );
 }
