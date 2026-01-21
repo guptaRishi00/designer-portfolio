@@ -12,7 +12,7 @@ const AvailableForWork = ({ variant = "default" }) => {
       description:
         "Results-driven UI/UX Designer with a passion for delivering seamless, user-centered digital experiences. Proficient in translating complex ideas into intuitive designs.",
       aboutLink: "/about",
-      imageSrc: "/Profile.jpeg",
+      imageSrc: "/profile.jpeg",
       counterColor: "color",
     },
     variant2: {
