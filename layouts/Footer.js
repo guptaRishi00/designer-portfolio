@@ -12,7 +12,7 @@ const Footer = ({ footerShape = false }) => {
         <div className="px-2">
           <div className="row g-4 align-items-center">
             <div className="col-lg-6">
-              <div className="d-menu-1 wow" data-wow-delay=".3s">
+              <div className="d-menu-1 " data-wow-delay=".3s">
                 <ul>
                   <li>
                     <a href="#">Facebook</a>
@@ -22,6 +22,12 @@ const Footer = ({ footerShape = false }) => {
                   </li>
                   <li>
                     <a href="#">Instagram</a>
+                  </li>
+                  <li>
+                    <a href="#">Linkedin</a>
+                  </li>
+                  <li>
+                    <a href="https://www.behance.net/shristimittal1">Behance</a>
                   </li>
                 </ul>
                 <p className="no-bottom">
