@@ -13,7 +13,13 @@ const FitParentTitle = ({
   useEffect(() => {
     const fitText = () => {
       if (!titleRef.current) return;
-      setFontSize(innitialFontSize * (window.innerWidth / 1920));
+      const calculatedSize = innitialFontSize * (window.innerWidth / 1920);
+      // Use bigger fixed size on mobile for better visibility
+      if (window.innerWidth < 768) {
+        setFontSize(120);
+      } else {
+        setFontSize(calculatedSize);
+      }
     };
     fitText();
     window.addEventListener("resize", fitText);
@@ -22,6 +28,13 @@ const FitParentTitle = ({
 
   return (
     <Fragment>
+      <style>{`
+        @media (max-width: 768px) {
+          .text-fit {
+            font-size: 4.5rem !important;
+          }
+        }
+      `}</style>
       <h1
         ref={titleRef}
         className="text-fit wow fadeInDown fit_to_parent animated"

@@ -62,6 +62,13 @@ const Services = ({ variant = "default" }) => {
       <div className="container">
         <div className="row g-5">
           <div className="col-lg-4 wow fadeInRight" data-wow-delay=".3s">
+            <style>{`
+              @media (max-width: 768px) {
+                .jarallax {
+                  min-height: 250px !important;
+                }
+              }
+            `}</style>
             <div className="p-3 h-100 text-light jarallax">
               <img
                 src="/whatido.png"

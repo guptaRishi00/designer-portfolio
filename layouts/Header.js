@@ -21,7 +21,11 @@ const Header = ({
             className={`${activePage == item.id ? "active" : ""} menu-item-${item.id
               }`}
           >
-            <Link href={item.href}>
+            <Link
+              href={item.href}
+              target={item.external ? "_blank" : "_self"}
+              rel={item.external ? "noopener noreferrer" : undefined}
+            >
               {activePage ===
                 (item.href === "/" ? "home" : item.href.slice(1)) ? (
                 <span>{item.href === "/" ? "Home" : activePage}</span>

@@ -49,13 +49,15 @@ const AvailableForWork = ({ variant = "default" }) => {
             {selectedContent.description}
           </p>
           <div className="spacer-10" />
-          <Link
+          <a
             className="w-150px btn-line wow fadeIn"
             data-wow-delay=".6s"
-            href={selectedContent.aboutLink}
+            href="https://drive.google.com/file/d/1B6uIL_r8pMvxZyL53F80j77yCFE5CJQi/view?usp=drivesdk"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            About Me
-          </Link>
+            Resume
+          </a>
         </div>
         <div className="col-lg-6">
           <img

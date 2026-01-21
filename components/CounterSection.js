@@ -11,7 +11,7 @@ const CounterSection = ({ color = "color" }) => {
   return (
     <div className="row g-4">
       {counterData.map((item, index) => (
-        <div key={index} className="col-md-3 col-sm-6 mb-sm-30">
+        <div key={index} className="col-md-3 col-6 mb-sm-30">
           <div
             className={`de_count text-center fs-15 wow fadeInRight`}
             data-wow-delay={`${index * 0.2}s`}

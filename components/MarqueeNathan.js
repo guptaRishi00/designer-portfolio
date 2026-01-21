@@ -20,28 +20,40 @@ const MarqueeNathan = ({
   // Let's assume default is used.
 
   return (
-    <section className={`text-${isVariant2 ? "dark" : textColor} no-top`}>
-      <div className="wow fadeInRight d-flex">
-        <div className="de-marquee-list wow">
-          <Marquee
-            className=""
-            speed={200}
-            loop={0}
-            play={true}
-            autoFill={true}
-          >
-            {marqueeData.map((item) => (
-              <span
-                key={item.id}
-                className={`d-item-txt ${item.stroke ? "stroke-text" : ""}`}
-              >
-                {item.text}
-              </span>
-            ))}
-          </Marquee>
+    <>
+      <style>{`
+        .de-marquee-list .d-item-txt {
+          font-size: clamp(2rem, 8vw, 6rem) !important;
+        }
+        @media (max-width: 768px) {
+          .de-marquee-list .d-item-txt {
+            font-size: 1.5rem !important;
+          }
+        }
+      `}</style>
+      <section className={`text-${isVariant2 ? "dark" : textColor} no-top`}>
+        <div className="wow fadeInRight d-flex">
+          <div className="de-marquee-list wow">
+            <Marquee
+              className=""
+              speed={200}
+              loop={0}
+              play={true}
+              autoFill={true}
+            >
+              {marqueeData.map((item) => (
+                <span
+                  key={item.id}
+                  className={`d-item-txt ${item.stroke ? "stroke-text" : ""}`}
+                >
+                  {item.text}
+                </span>
+              ))}
+            </Marquee>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
