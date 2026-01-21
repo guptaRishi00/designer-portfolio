@@ -24,7 +24,7 @@ const Footer = ({ footerShape = false }) => {
                     <a href="#">Instagram</a>
                   </li>
                   <li>
-                    <a href="#">Linkedin</a>
+                    <a href="https://www.linkedin.com/in/shristi-mittal26/">Linkedin</a>
                   </li>
                   <li>
                     <a href="https://www.behance.net/shristimittal1">Behance</a>
