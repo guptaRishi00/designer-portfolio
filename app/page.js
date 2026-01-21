@@ -18,53 +18,27 @@ const page = () => {
 
   const mobileStyles = `
     @media (max-width: 768px) {
-      h1 {
-        font-size: 1.8rem !important;
-      }
-      h2 {
-        font-size: 1.4rem !important;
-      }
-      h4 {
-        font-size: 1rem !important;
-      }
-      p, .lead {
-        font-size: 0.9rem !important;
-      }
-      .subtitle {
-        font-size: 0.7rem !important;
-      }
-      .spacer-double {
-        height: 40px !important;
-      }
-      .spacer-single {
-        height: 20px !important;
-      }
-      .de_count h3 {
-        font-size: 2rem !important;
-      }
-      .container {
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-      }
-      section {
-        padding-top: 30px !important;
-        padding-bottom: 30px !important;
-      }
-      section.no-top {
-        padding-top: 0 !important;
-      }
-      .work-card {
-        height: 250px !important;
-      }
-      .work-card-title {
-        font-size: 1.2rem !important;
-      }
+      h1 { font-size: 1.8rem !important; }
+      h2 { font-size: 1.4rem !important; }
+      h4 { font-size: 1rem !important; }
+      p, .lead { font-size: 0.9rem !important; }
+      .subtitle { font-size: 0.7rem !important; }
+      .spacer-double { height: 40px !important; }
+      .spacer-single { height: 20px !important; }
+      .de_count h3 { font-size: 2rem !important; }
+      .container { padding-left: 15px !important; padding-right: 15px !important; }
+      section { padding-top: 30px !important; padding-bottom: 30px !important; }
+      section.no-top { padding-top: 0 !important; }
+      .work-card { height: 250px !important; }
+      .work-card-title { font-size: 1.2rem !important; }
     }
   `;
 
   return (
     <NathanLayout rootElements={pageStyles}>
-      <style>{mobileStyles}</style>
+      {/* FIX: Use dangerouslySetInnerHTML to prevent hydration errors */}
+      <style dangerouslySetInnerHTML={{ __html: mobileStyles }} />
+
       <div className="section-dark no-bottom no-top" id="content">
         <div id="top" />
         <section className="no-top">
@@ -84,9 +58,9 @@ const page = () => {
           </div>
         </section>
         <Works />
-        {/* <MarqueeNathan /> */}
       </div>
     </NathanLayout>
   );
 };
+
 export default page;

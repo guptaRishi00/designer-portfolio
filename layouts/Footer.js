@@ -23,7 +23,32 @@ const Footer = ({ footerShape = false }) => {
 
   return (
     <footer>
-      <style>{footerStyles}</style>
+      {/* Replace the existing <style> tag in your Footer component with this */}
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+    .d-menu-1 a {
+      font-size: 1.5rem !important; /* Increases Linkedin/Behance links */
+      margin-right: 30px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+    .d-menu-1 a:hover {
+      opacity: 0.6;
+    }
+    .d-menu-1 p {
+      font-size: 1.1rem !important; /* Increases copyright text */
+      margin-top: 15px;
+    }
+    /* The quotes in the comment below were causing the error */
+    /* Optional: Ensure "Let's Talk" stays responsive but large */
+    footer h2 {
+      font-size: clamp(3.5rem, 8vw, 6.5rem) !important; 
+    }
+`,
+        }}
+      />
       {footerShape && (
         <img
           src="images/misc/scratches-3.webp"
