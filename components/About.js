@@ -31,7 +31,7 @@ const About = ({ variant = "default", aboutTitle = "About Me" }) => {
   const selectedContent = isVariant2 ? content.variant2 : content.default;
 
   return (
-    <section className="no-top">
+    <section className="no-top no-bottom">
       <div className="container">
         <div className="row">
           <div className="col-lg-2">

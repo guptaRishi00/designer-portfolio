@@ -31,7 +31,7 @@ const MarqueeNathan = ({
           }
         }
       `}</style>
-      <section className={`text-${isVariant2 ? "dark" : textColor} no-top`}>
+      <section className={`text-${isVariant2 ? "dark" : textColor} no-top no-bottom`}>
         <div className="wow fadeInRight d-flex">
           <div className="de-marquee-list wow">
             <Marquee

@@ -22,7 +22,7 @@ const Footer = ({ footerShape = false }) => {
   `;
 
   return (
-    <footer>
+    <footer style={{ marginTop: '100px' }}>
       {/* Replace the existing <style> tag in your Footer component with this */}
       <style
         dangerouslySetInnerHTML={{

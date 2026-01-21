@@ -43,7 +43,7 @@ const ClientReviews = () => {
     ];
 
     return (
-        <section className="no-top">
+        <section className="no-top no-bottom">
             <div className="container">
                 <div className="row g-4">
                     <div className="col-lg-2">

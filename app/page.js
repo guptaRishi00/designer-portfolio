@@ -17,6 +17,7 @@ const page = () => {
   };
 
   const mobileStyles = `
+    .spacer-section { height: 70px; }
     @media (max-width: 768px) {
       h1 { font-size: 1.8rem !important; }
       h2 { font-size: 1.4rem !important; }
@@ -25,10 +26,12 @@ const page = () => {
       .subtitle { font-size: 0.7rem !important; }
       .spacer-double { height: 40px !important; }
       .spacer-single { height: 20px !important; }
+      .spacer-section { height: 40px !important; }
       .de_count h3 { font-size: 2rem !important; }
       .container { padding-left: 15px !important; padding-right: 15px !important; }
-      section { padding-top: 30px !important; padding-bottom: 30px !important; }
+      section { padding-top: 20px !important; padding-bottom: 20px !important; }
       section.no-top { padding-top: 0 !important; }
+      section.no-bottom { padding-bottom: 0 !important; }
       .work-card { height: 250px !important; }
       .work-card-title { font-size: 1.2rem !important; }
     }
@@ -41,7 +44,7 @@ const page = () => {
 
       <div className="section-dark no-bottom no-top" id="content">
         <div id="top" />
-        <section className="no-top">
+        <section className="no-top no-bottom">
           <div className="text-fit-wrapper">
             <FitParentTitle title={"SHRISTI"} />
             <Header activePage="1" />
@@ -49,14 +52,19 @@ const page = () => {
           <div className="spacer-double" />
           <AvailableForWork />
         </section>
+        <div className="spacer-section" />
         <MarqueeNathan />
+        <div className="spacer-section" />
         <About />
+        <div className="spacer-section" />
         <Services />
-        <section className="no-top">
+        <div className="spacer-section" />
+        <section className="no-top no-bottom">
           <div className="container">
             <CounterSection />
           </div>
         </section>
+        <div className="spacer-section" />
         <Works />
       </div>
     </NathanLayout>

@@ -75,7 +75,7 @@ const Works = ({ variant = "default", textColor = "light-text" }) => {
     default: {
       title:
         "Explore the projects below to see how I bring ideas to life through thoughtful design and meticulous execution.",
-      className: "no-top text-light",
+      className: "no-top no-bottom text-light",
     },
     variant2: {
       title: (

@@ -58,7 +58,7 @@ const Services = ({ variant = "default" }) => {
   const services = isVariant2 ? servicesData.variant2 : servicesData.default;
 
   return (
-    <section className="no-top">
+    <section className="no-top no-bottom">
       <div className="container">
         <div className="row g-5">
           <div className="col-lg-4 wow fadeInRight" data-wow-delay=".3s">

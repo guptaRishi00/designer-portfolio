@@ -49,7 +49,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className="bg-black text-white py-5">
+    <section className="bg-black text-white py-5 no-top no-bottom">
       <div className="container">
         {/* --- SECTION 1: DESIGN SKILLS (Updated Layout) --- */}
         <div className="row mb-5 pb-5">
@@ -114,10 +114,8 @@ const Skills = () => {
           </div>
         </div>
 
-        <hr className="opacity-10 mb-5" />
-
         {/* --- SECTION 2: TOOLS LAYOUT --- */}
-        <div className="row align-items-start pt-4">
+        <div className="row align-items-start" style={{ marginTop: '25px' }}>
           {/* Left Title */}
           <div className="col-md-2">
             <h6

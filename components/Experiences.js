@@ -15,9 +15,9 @@ const Experiences = ({
   ],
 }) => {
   return (
-    <section className="no-top">
+    <section className="no-top no-bottom">
       <div className="container">
-        <div className="row g-4">
+        <div className="row g-4 align-items-start">
           <div className="col-lg-2">
             <div className="subtitle wow fadeInUp" data-wow-delay=".3s">
               Experiences
