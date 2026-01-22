@@ -2,10 +2,10 @@ import Counter from "./Counter";
 
 const CounterSection = ({ color = "color" }) => {
   const counterData = [
-    { end: 8240, text: "Hours of Works" },
-    { end: 315, text: "Projects Done" },
-    { end: 250, text: "Satisfied Customers" },
-    { end: 32, text: "Awards Winning" },
+    { end: 5240, suffix: "+", text: "Hours of Works" },
+    { end: 3, suffix: "+", text: "Years of Experience" },
+    { end: 420, suffix: "+", text: "Screens Designed" },
+    { end: 16, suffix: "%", text: "Bussiness Impact" },
   ];
 
   return (
@@ -18,6 +18,7 @@ const CounterSection = ({ color = "color" }) => {
           >
             <h3 className={`fs-48 mb-1 ${color}`}>
               <Counter end={item.end} />
+              {item.suffix && <span>{item.suffix}</span>}
             </h3>
             <div className="fs-15">{item.text}</div>
           </div>
@@ -28,3 +29,4 @@ const CounterSection = ({ color = "color" }) => {
 };
 
 export default CounterSection;
+

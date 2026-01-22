@@ -35,8 +35,8 @@ const Skills = () => {
     },
 
     {
-      name: "Adobe XD",
-      icon: <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg" alt="Figma" style={{ width: 50, height: 50 }} />
+      name: "Solid Works",
+      icon: <img src="https://1000marcas.net/wp-content/uploads/2020/11/SolidWorks-logo-600x315.png" alt="Figma" style={{ width: 60, height: 50 }} />
     },
     {
       name: "Blender",
@@ -52,22 +52,19 @@ const Skills = () => {
     <section className="bg-black text-white py-5 no-top no-bottom">
       <div className="container">
         {/* --- SECTION 1: DESIGN SKILLS (Updated Layout) --- */}
-        <div className="row mb-5 pb-5">
+        <div className="row g-4 align-items-start">
           {/* Left Title */}
-          <div className="col-md-2">
-            <h3
-              className="fw-bold text-uppercase italic"
-              style={{ fontSize: "13px", letterSpacing: "1px" }}
-            >
+          <div className="col-lg-2">
+            <div className="subtitle wow fadeInUp" data-wow-delay=".3s">
               Design Skills
-            </h3>
+            </div>
           </div>
 
           {/* Right Content: Progress Bars */}
-          <div className="col-md-10">
-            <div className="row">
+          <div className="col-lg-10">
+            <div className="row g-4">
               {designSkills.map((skill, index) => (
-                <div key={index} className="col-md-6 mb-5">
+                <div key={index} className="col-md-6">
                   <div className="d-flex justify-content-between mb-2">
                     <span className="fs-14 fw-bold text-uppercase">
                       {skill.name}
@@ -114,32 +111,28 @@ const Skills = () => {
           </div>
         </div>
 
+        <div className="spacer-section" style={{ height: "70px" }} />
+
         {/* --- SECTION 2: TOOLS LAYOUT --- */}
-        <div className="row align-items-start" style={{ marginTop: '25px' }}>
+        <div className="row g-4 align-items-start">
           {/* Left Title */}
-          <div className="col-md-2">
-            <h6
-              className="fw-bold text-uppercase m-0"
-              style={{ letterSpacing: "1px", fontSize: "13px" }}
-            >
+          <div className="col-lg-2">
+            <div className="subtitle wow fadeInUp" data-wow-delay=".3s">
               My Tools
-            </h6>
+            </div>
           </div>
 
           {/* Right Content: Icons Grid */}
-          <div className="col-md-10">
-            <div className="row g-4">
+          <div className="col-lg-10">
+            <div style={{ display: "flex", gap: "2rem", flexWrap: "nowrap" }}>
               {tools.map((tool, index) => (
                 <div
                   key={index}
-                  className="col-6 col-sm-4 col-md-2 text-center"
+                  className="wow fadeInRight"
+                  data-wow-delay={`.${index + 4}s`}
+                  style={{ flex: "1 1 0", minWidth: 0 }}
                 >
-                  <div
-                    className="d-flex justify-content-center align-items-center mb-3 mx-auto"
-                    style={{
-
-                    }}
-                  >
+                  <div className="mb-3">
                     {tool.icon}
                   </div>
                   <p

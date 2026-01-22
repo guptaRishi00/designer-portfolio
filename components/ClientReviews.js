@@ -33,13 +33,13 @@ const ClientReviews = () => {
             quote:
                 "Shristi created a beautiful, nature-inspired design for our eco resort website. The visual appeal perfectly represents our brand and has helped attract more guests.",
         },
-        {
-            name: "Newspace Team",
-            role: "Aerospace & Defense",
-            image: "/Frame4.png",
-            quote:
-                "The design work for our aerospace company was outstanding. Shristi understood our technical requirements and delivered a professional, cutting-edge website.",
-        },
+        // {
+        //     name: "Newspace Team",
+        //     role: "Aerospace & Defense",
+        //     image: "/Frame4.png",
+        //     quote:
+        //         "The design work for our aerospace company was outstanding. Shristi understood our technical requirements and delivered a professional, cutting-edge website.",
+        // },
     ];
 
     return (
