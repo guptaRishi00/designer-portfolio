@@ -1,3 +1,10 @@
+// Mobile detection utility
+export const isMobile = () => {
+  if (typeof window === "undefined") return false;
+  return window.innerWidth <= 768 ||
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+};
+
 export const nathanUtility = {
   scrollAnimation() {
     /* This code snippet is checking if the `window` object is defined in the current environment. If
@@ -7,7 +14,11 @@ export const nathanUtility = {
     if (typeof window !== "undefined") {
       window.WOW = require("wowjs");
     }
-    new WOW.WOW().init();
+    // Use reduced animation settings on mobile
+    new WOW.WOW({
+      mobile: true,
+      live: !isMobile(), // Disable live on mobile for better performance
+    }).init();
   },
   preloader() {
     if (typeof window !== "undefined") {
@@ -46,6 +57,9 @@ export const nathanUtility = {
     }
   },
   shuffleText() {
+    // Skip shuffle text on mobile - too CPU intensive
+    if (isMobile()) return;
+
     const velocity = 40;
     const shuffleElement = document.querySelectorAll(
       ".shuffle, .d-menu-1 li a, .btn-main, .btn-line"
@@ -158,6 +172,9 @@ export const nathanUtility = {
   },
   jarallax() {
     if (typeof window !== "undefined") {
+      // Skip jarallax on mobile - causes scroll performance issues
+      if (isMobile()) return;
+
       const { jarallax } = require("jarallax");
       const elements = document.querySelectorAll(".jarallax");
       jarallax(elements);

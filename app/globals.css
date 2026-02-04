@@ -486,3 +486,192 @@ img.mfp-img {
 .slick-dots li.slick-active button {
   background-color: #fff !important;
 }
+
+/* ============================================
+   MOBILE-SPECIFIC STYLES FOR PERFORMANCE & RENDERING
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Menu visibility fix */
+  .d-menu-1 {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+  
+  .d-menu-1 ul {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .d-menu-1 li {
+    display: inline-block !important;
+  }
+  
+  .d-menu-1 li a {
+    font-size: 0.75rem !important;
+    padding: 6px 10px !important;
+    display: block !important;
+  }
+  
+  /* Jarallax fallback on mobile (no parallax) */
+  .jarallax {
+    background-attachment: scroll !important;
+  }
+  
+  .jarallax-img {
+    position: relative !important;
+    transform: none !important;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Section padding adjustments */
+  section {
+    padding: 30px 0 !important;
+  }
+  
+  section.no-top {
+    padding-top: 0 !important;
+  }
+  
+  section.no-bottom {
+    padding-bottom: 0 !important;
+  }
+  
+  /* Container padding */
+  .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  
+  /* Typography adjustments */
+  h1, .h1 {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  h2, .h2 {
+    font-size: 1.5rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  h3, .h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  h4, .h4 {
+    font-size: 1rem !important;
+  }
+  
+  .lead {
+    font-size: 0.95rem !important;
+  }
+  
+  .subtitle {
+    font-size: 0.7rem !important;
+    letter-spacing: 1px !important;
+  }
+  
+  /* Work cards mobile fix */
+  .work-card {
+    height: 280px !important;
+    margin-bottom: 15px;
+  }
+  
+  .work-card-title {
+    font-size: 1.3rem !important;
+  }
+  
+  /* Counter section */
+  .de_count h3,
+  .de_count .fs-48,
+  .de_count .fs-36 {
+    font-size: 1.8rem !important;
+  }
+  
+  /* Spacers */
+  .spacer-double {
+    height: 40px !important;
+  }
+  
+  .spacer-single {
+    height: 20px !important;
+  }
+  
+  .spacer-10 {
+    height: 10px !important;
+  }
+  
+  /* Text fit wrapper */
+  .text-fit-wrapper {
+    overflow: hidden;
+    padding: 10px 0;
+  }
+  
+  .text-fit {
+    font-size: 3.5rem !important;
+    line-height: 1 !important;
+  }
+  
+  /* Hide elements that cause issues on mobile */
+  .xs-hide {
+    display: none !important;
+  }
+  
+  /* Performance: Reduce animation complexity */
+  .wow {
+    animation-duration: 0.5s !important;
+  }
+  
+  /* Scrollbar adjustments */
+  .scrollbar-v {
+    display: none !important;
+  }
+  
+  /* Float text visibility */
+  .float-text {
+    right: 10px !important;
+    font-size: 10px !important;
+  }
+  
+  /* Row gap adjustments */
+  .row.g-4,
+  .row.g-5 {
+    --bs-gutter-y: 1.5rem;
+  }
+  
+  /* Profile image sizing */
+  .col-lg-6 img {
+    width: 80% !important;
+    max-width: 300px;
+  }
+}
+
+/* Performance optimizations */
+.work-card,
+.work-card-bg,
+.de-marquee-list,
+.jarallax {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Reduce repaints during scroll */
+.wow {
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* GPU acceleration for smooth scrolling */
+#wrapper {
+  transform: translateZ(0);
+}

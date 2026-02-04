@@ -1,3 +1,5 @@
+"use client";
+import { useState, useEffect } from "react";
 import Marquee from "react-fast-marquee";
 
 const MarqueeNathan = ({
@@ -15,9 +17,19 @@ const MarqueeNathan = ({
   ],
 }) => {
   const isVariant2 = variant === "variant2";
-  // If marqueeData is passed as simple array from parent, handle it? 
-  // But usually it relies on default.
-  // Let's assume default is used.
+
+  // Reduce marquee speed on mobile for better performance
+  const [marqueeSpeed, setMarqueeSpeed] = useState(200);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      const isMobile = window.innerWidth <= 768;
+      setMarqueeSpeed(isMobile ? 50 : 200);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   return (
     <>
@@ -36,7 +48,7 @@ const MarqueeNathan = ({
           <div className="de-marquee-list wow">
             <Marquee
               className=""
-              speed={200}
+              speed={marqueeSpeed}
               loop={0}
               play={true}
               autoFill={true}

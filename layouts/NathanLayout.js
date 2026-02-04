@@ -21,6 +21,7 @@ const NathanLayout = ({
 }) => {
   useEffect(() => {
     nathanUtility.scrollAnimation();
+    // These are conditionally skipped on mobile inside the utility functions
     nathanUtility.shuffleText();
     nathanUtility.jarallax();
     nathanUtility.fitText();
